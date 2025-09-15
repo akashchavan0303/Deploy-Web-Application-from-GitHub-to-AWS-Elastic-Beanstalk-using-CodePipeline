@@ -1,14 +1,15 @@
 ⚙️ Setup Steps
-=
+   =
 1. Prepare Your Application
+ 
+    *.Add your application code to this repository.
+ 
+    *.Ensure dependencies are listed (requirements.txt, package.json, or build file depending on language).
+ 
+  2. Create Elastic Beanstalk Environment
 
-2.Add your application code to this repository.
 
-  Ensure dependencies are listed (requirements.txt, package.json, or build file depending on language).
-3. Create Elastic Beanstalk Environment
-
-
- -In the AWS Management Console, go to Elastic Beanstalk.
+  -In the AWS Management Console, go to Elastic Beanstalk.
 
   Create a new application and environment (Web-deploy-env).
  Select the correct platform (Node.js, Python, Java, etc.).
@@ -25,13 +26,27 @@ Add policies in the Role.
 <img width="1907" height="913" alt="image" src="https://github.com/user-attachments/assets/8e4a22cd-06ef-4aaf-9257-31213a359a79" />
 
 4. Configure CodePipeline
-=
+ =
 
-Open AWS CodePipeline in the console.
-Create connection to github.
-Create a new pipeline and give it a name.
-Source Stage: Choose GitHub and connect to this repository.
-Build Stage (Optional): You can add a build step with AWS CodeBuild if your app needs compiling or testing.
-Deploy Stage: Choose Elastic Beanstalk and select your application and environment.
-Save and create the pipeline.
+ -Open AWS CodePipeline in the console.
+
+ -Create connection to github.
+ 
+ -Create a new pipeline and give it a name.
+ 
+ -Source Stage: Choose GitHub and connect to this repository.
+ 
+ -Build Stage (Optional): You can add a build step with AWS CodeBuild if your app needs compiling or testing.
+ 
+ -Deploy Stage: Choose Elastic Beanstalk and select your application and environment.
+ 
+ -Save and create the pipeline.
+ 
+<img width="1902" height="927" alt="image" src="https://github.com/user-attachments/assets/4b3b4060-db62-4a06-aa56-d0f8982ffea4" />
+<img width="1901" height="920" alt="image" src="https://github.com/user-attachments/assets/f4cb5aa6-c9b6-4e4b-9492-a94063cb362c" />
+
+5.Check final output
+=
+ Refresh the page of Elastic Beanstalk.
+<img width="1902" height="936" alt="image" src="https://github.com/user-attachments/assets/3b56b342-a3b7-40bc-a178-a66ac49fce0c" />
 
